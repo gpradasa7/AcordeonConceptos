@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: fixed;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+
+  background-image: url(https://www.solofondos.com/wp-content/uploads/2021/03/wp6529674.jpg);
+  background-position: center;
+  scroll-behavior: smooth;
+  transition: all 1s;
+  backdrop-filter: blur(0.15rem);
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tittle {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.content-acordeon {
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+.content {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.content-desplegab {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.459);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.primario {
+  border-top: 1px solid #afafaf;
+  border-radius: 30px;
+}
+
+.content-desplegab:hover {
+  background-color: rgba(0, 255, 255, 0.438);
+  transform: translateY(-7px);
+}
+
+.content-desplegab:active {
+  background-color: rgba(255, 60, 0, 0.438);
+}
+
+.answer p::selection {
+  background-color: hotpink;
+}
+
+.desplegable {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.answer img {
+  height: 50%;
+  width: 50%;
+}
+.answer {
+  overflow: auto;
+  height: 0;
+  border-radius: 30px;
+  display: flex;
+  flex: 50%;
+  transform: translate(0%, 200%);
+}
+.answer p {
+  padding: 10px 40px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+}
+
+.open {
+  height: max-content;
+
+  transform: translate(0%, -0%);
+  transition: all 0.15s;
+  background-color: rgba(18, 18, 18, 0.356);
+  color: white;
+}
+.flecha-content {
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+.up .line {
+  transform: translate(0%, -50%) rotate(-45deg);
+}
+.up .line:nth-of-type(2) {
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+.line {
+  height: 1px;
+  width: 50%;
+  position: absolute;
+  background-color: #c8424283;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+
+.line:nth-of-type(2) {
+  right: 8%;
+  left: auto;
+  transform: translate(0%, -50%) rotate(-45deg);
+}
